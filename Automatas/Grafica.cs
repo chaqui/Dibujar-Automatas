@@ -14,9 +14,9 @@ namespace Automatas
     {
         public Conexiones[] ceonex;
         public string[] lenguaje = new string[10];
+        ComponentesLineas[] lineas;
         LetrasyCoordenadas[] listaDeLetras;
-        int z;
-        int y;
+        int z, y, v;
         int cantidad,b;
         public Grafica(int c,int a,int q)
         {
@@ -28,9 +28,12 @@ namespace Automatas
                 listaDeLetras[i] = new LetrasyCoordenadas();
             }
             ceonex = new Conexiones[a+1];
+            lineas = new ComponentesLineas[a + 1];
+
             for (int i = 0; i < a; i++)
             {
                 ceonex[i] = new Conexiones();
+                lineas[i] = new ComponentesLineas();
             }
             InitializeComponent();
         }
@@ -122,6 +125,32 @@ namespace Automatas
                     posy++;
 
 
+                }
+            }
+            v = 0;
+            foreach (LetrasyCoordenadas lyc in listaDeLetras)
+            {
+                foreach (Conexiones con in ceonex)
+                {
+                    if (String.Compare(lyc.letra,con.Base)==0)
+                    {
+                        lineas[v].x1 = Convert.ToInt32(lyc.cooX);
+                        lineas[v].y1 = Convert.ToInt32(lyc.cooY);
+                        lineas[v].l1 = con.Len;
+                        foreach (LetrasyCoordenadas lyc2 in listaDeLetras)
+                        {
+                            foreach (Conexiones con2 in ceonex)
+                            {
+                                if (String.Compare(lyc2.letra, con.Base) == 0)
+                                {
+                                    lineas[v].x2 = Convert.ToInt32(lyc2.cooX);
+                                    lineas[v].y2 = Convert.ToInt32(lyc2.cooY);
+                                    lineas[v].l2 = con2.Len;
+                                }
+                            }
+                        }
+                        v++;
+                    }
                 }
             }
             grafica.Dispose();

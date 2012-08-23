@@ -74,12 +74,15 @@ namespace Automatas
                 //Circulos
                 grafica.DrawEllipse(lapiz, posx, posy, sizew, sizeh);
                 //Letras Negras
-                grafica.DrawString((Convert.ToString(letras[i])), arial2, pincelsolido, (posx + 15), (posy + 5));
+                posx = posx + 15;
+                grafica.DrawString((Convert.ToString(letras[i])), arial2, pincelsolido, (posx), (posy));
                 k = k + "\"" + Convert.ToString(letras[i]) + "\"" + ",";
                 //
+                //Guardando las listas y las posiciones de los circulos
                 listaDeLetras[i].letra = letras[i];
                 listaDeLetras[i].cooX = posx;
                 listaDeLetras[i].cooY = posy;
+                //modificando las variables 
                 if (i == 0)
                 {
                     z = 2;
@@ -127,12 +130,22 @@ namespace Automatas
 
                 }
             }
+            
+            grafica.Dispose();
+            k = k + "}";
+            lenguaje = lenguaje + "}";
+            copiarDatos();
+
+            textBox1.Text = (ceonex[0].Base2);
+        }
+        public void copiarDatos()
+        {
             v = 0;
             foreach (LetrasyCoordenadas lyc in listaDeLetras)
             {
                 foreach (Conexiones con in ceonex)
                 {
-                    if (String.Compare(lyc.letra,con.Base)==0)
+                    if (String.Compare(lyc.letra, con.Base) == 0)
                     {
                         lineas[v].x1 = Convert.ToInt32(lyc.cooX);
                         lineas[v].y1 = Convert.ToInt32(lyc.cooY);
@@ -153,15 +166,11 @@ namespace Automatas
                     }
                 }
             }
-            grafica.Dispose();
-            k = k + "}";
-            lenguaje = lenguaje + "}";
-
-            textBox1.Text = (ceonex[0].Base2);
         }
 
     
 } 
 
         }
+
     

@@ -7,7 +7,7 @@ namespace Automatas
 {
     public class Conexiones
     {
-        public String Base=" ";
+        public String Base;
         public String Base2=" ";
         public String Len=" ";
     }

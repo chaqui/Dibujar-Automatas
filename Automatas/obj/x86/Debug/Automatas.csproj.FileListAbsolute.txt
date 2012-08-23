@@ -1,0 +1,10 @@
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\bin\Debug\Automatas.exe
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\bin\Debug\Automatas.pdb
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\Automatas.Form1.resources
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\Automatas.Properties.Resources.resources
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\Automatas.exe
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\Automatas.pdb
+C:\Users\Chaqui\Documents\Visual Studio 2010\Projects\Automatas\Automatas\obj\x86\Debug\Automatas.Grafica.resources

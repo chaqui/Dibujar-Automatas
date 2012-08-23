@@ -21,18 +21,18 @@ namespace Automatas
         public Grafica(int c,int a,int q)
         {
             cantidad = c;
-            
-            listaDeLetras = new LetrasyCoordenadas[c];
+            int c1 = c + 1;
+            listaDeLetras = new LetrasyCoordenadas[c1];
             for (int i = 0; i < c; i++)
             {
                 listaDeLetras[i] = new LetrasyCoordenadas();
             }
-            ceonex = new Conexiones[a];
+            ceonex = new Conexiones[a+1];
             for (int i = 0; i < a; i++)
             {
                 ceonex[i] = new Conexiones();
             }
-            
+            InitializeComponent();
         }
 
         private void Grafica_Load(object sender, EventArgs e)
@@ -127,8 +127,8 @@ namespace Automatas
             grafica.Dispose();
             k = k + "}";
             lenguaje = lenguaje + "}";
-            
-            
+
+            textBox1.Text = (ceonex[0].Base2);
         }
 
     

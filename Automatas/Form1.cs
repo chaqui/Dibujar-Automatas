@@ -11,8 +11,7 @@ namespace Automatas
 {
     public partial class Form1 : Form
     {
-        int q;
-        int n;
+        int q, n, z; 
         protected Conexiones[] con;
         public Form1()
         {
@@ -47,11 +46,11 @@ namespace Automatas
                 {
                     if (String.Compare(aa.ToString(),">")==0)
                     {
-                        n++;
+                        z++;
                     }
                 }
-                con = new Conexiones[n];
-                for (int i = 0; i < n; i++)
+                con = new Conexiones[z];
+                for (int i = 0; i < z; i++)
                 {
                     con[i] = new Conexiones();
                 }
@@ -98,7 +97,7 @@ namespace Automatas
                     }
                 }
                 Prueba.Text = Convert.ToString(con[0].Base2);
-                Grafica grafica = new Grafica(c,n,q);
+                Grafica grafica = new Grafica(c,z,q);
                 grafica.lenguaje = lenguaje;
                 for (int i = 0; i < n ; i++)
                 {
@@ -106,7 +105,7 @@ namespace Automatas
                     grafica.ceonex[i].Base2 = con[i].Base2;
                     grafica.ceonex[i].Len = con[i].Len;
                 }
-             
+                
                 grafica.Show();
             }
             catch (Exception )

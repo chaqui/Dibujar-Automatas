@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Automatas
 {
-    class Conexiones
+    public class Conexiones
     {
         public String Base=" ";
         public String Base2=" ";

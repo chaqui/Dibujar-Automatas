@@ -13,7 +13,7 @@ namespace Automatas
     {
         int q;
         int n;
-        public Conexiones[] con;
+        protected Conexiones[] con;
         public Form1()
         {
             InitializeComponent();
@@ -58,13 +58,53 @@ namespace Automatas
                 bool banderacoma=true;
                 bool banderamayor = true;
                 n = 0;
-                
+                foreach (char bb in conex)
+                {
+                    if (String.Compare(bb.ToString(),";")==0)
+                    {
+                        n++;
+                    }
+                    else
+                    {
+                        if (String.Compare(bb.ToString(), ">") != 0)
+                        {
+                            if (banderamayor)
+                            {
+                                if (String.Compare(bb.ToString(), ",") != 0)
+                                {
+                                    if (banderacoma)
+                                    {
+                                        con[n].Base = con[n].Base + Convert.ToString(bb);
+                                    }
+                                    else
+                                    {
+                                        con[n].Len = con[n].Len + Convert.ToString(bb);
+                                    }
+                                }
+                                else
+                                {
+                                    banderacoma = false;
+                                }
+                            }
+                            else
+                            {
+                                con[n].Base2 = con[n].Base2 + Convert.ToString(bb);
+                            }
+                        }
+                        else
+                        {
+                            banderamayor = false; 
+                        }
+                    }
+                }
                 Prueba.Text = Convert.ToString(con[0].Base2);
                 Grafica grafica = new Grafica(c,n);
                 grafica.lenguaje = lenguaje;
                 for (int i = 0; i < c; i++)
                 {
-                    
+                    grafica.ceonex[i].Base = con[i].Base;
+                    grafica.ceonex[i].Base2 = con[i].Base2;
+                    grafica.ceonex[i].Len = con[i].Len;
                 }
                 grafica.Show();
             }

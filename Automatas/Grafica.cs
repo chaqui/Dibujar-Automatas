@@ -14,15 +14,14 @@ namespace Automatas
     {
         public Conexiones[] ceonex;
         public string[] lenguaje = new string[10];
-        string conexiones;
         LetrasyCoordenadas[] listaDeLetras;
         int z;
         int y;
         int cantidad,b;
-        public Grafica(int c,int a)
+        public Grafica(int c,int a,int q)
         {
             cantidad = c;
-            InitializeComponent();
+            
             listaDeLetras = new LetrasyCoordenadas[c];
             for (int i = 0; i < c; i++)
             {
@@ -33,7 +32,7 @@ namespace Automatas
             {
                 ceonex[i] = new Conexiones();
             }
-        
+            
         }
 
         private void Grafica_Load(object sender, EventArgs e)

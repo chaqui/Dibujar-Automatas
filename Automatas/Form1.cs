@@ -100,7 +100,7 @@ namespace Automatas
                 Prueba.Text = Convert.ToString(con[0].Base2);
                 Grafica grafica = new Grafica(c,n);
                 grafica.lenguaje = lenguaje;
-                for (int i = 0; i < c; i++)
+                for (int i = 0; i < n; i++)
                 {
                     grafica.ceonex[i].Base = con[i].Base;
                     grafica.ceonex[i].Base2 = con[i].Base2;
